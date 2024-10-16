@@ -1,8 +1,8 @@
 namespace GenesisRossA6
 {
-    public partial class Form1 : Form
+    public partial class GenesisRossA6 : Form
     {
-        public Form1()
+        public GenesisRossA6()
         {
             InitializeComponent();
         }

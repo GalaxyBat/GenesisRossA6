@@ -1,6 +1,6 @@
 ﻿namespace GenesisRossA6
 {
-    partial class Form1
+    partial class GenesisRossA6
     {
         /// <summary>
         ///  Required designer variable.

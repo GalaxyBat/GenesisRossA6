@@ -28,12 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            exportJSONBTN = new Button();
+            chooseFileBTN = new Button();
+            SuspendLayout();
+            // 
+            
+            // 
+            // exportJSONBTN
+            // 
+            exportJSONBTN.Location = new Point(153, 340);
+            exportJSONBTN.Name = "exportJSONBTN";
+            exportJSONBTN.Size = new Size(140, 48);
+            exportJSONBTN.TabIndex = 2;
+            exportJSONBTN.Text = "Export JSON File";
+            exportJSONBTN.UseVisualStyleBackColor = true;
+            // 
+            // chooseFileBTN
+            // 
+            chooseFileBTN.Location = new Point(153, 129);
+            chooseFileBTN.Name = "chooseFileBTN";
+            chooseFileBTN.Size = new Size(140, 48);
+            chooseFileBTN.TabIndex = 3;
+            chooseFileBTN.Text = "Choose File";
+            chooseFileBTN.UseVisualStyleBackColor = true;
+            // 
+            // GenesisRossA6
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(470, 450);
+            Controls.Add(chooseFileBTN);
+            Controls.Add(exportJSONBTN);
+            Name = "GenesisRossA6";
+            Text = "GenesisRossA6";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button exportJSONBTN;
+        private Button chooseFileBTN;
     }
 }

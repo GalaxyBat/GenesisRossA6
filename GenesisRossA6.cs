@@ -1,10 +1,10 @@
-namespace GenesisRossA6
+namespace GenesisRossA6;
+
+public partial class GenesisRossA6 : Form
 {
-    public partial class GenesisRossA6 : Form
+    public GenesisRossA6()
     {
-        public GenesisRossA6()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
     }
+
 }

@@ -1,13 +1,18 @@
 ﻿
+using System.Text.Json.Serialization;
+
 namespace GenesisRossA6.Models;
 
 public class Book
 {
-    private string? _title { get; set; }
-    private string? _author { get; set; }
-    private int _pageLength { get; set; }
-    private string? _genre { get; set; }
-    private DateTime? _year { get; set; }
-    private decimal _msrp { get; set; }
+    public string? Title { get; set; }
+    public string? Author { get; set; }
+    [JsonPropertyName("Page Length")]
+    public int PageLength { get; set; }
+    public string? Genre { get; set; }
+    [JsonPropertyName("Year Published")]
+    public int YearPublished { get; set; }
+    [JsonPropertyName("MSRP")]
+    public decimal Msrp { get; set; }
 
 }

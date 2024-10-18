@@ -30,9 +30,8 @@
         {
             exportJSONBTN = new Button();
             chooseFileBTN = new Button();
+            exportCSVBTN = new Button();
             SuspendLayout();
-            // 
-            
             // 
             // exportJSONBTN
             // 
@@ -42,6 +41,7 @@
             exportJSONBTN.TabIndex = 2;
             exportJSONBTN.Text = "Export JSON File";
             exportJSONBTN.UseVisualStyleBackColor = true;
+            exportJSONBTN.Click += ExportJSONBTN_Click;
             // 
             // chooseFileBTN
             // 
@@ -51,12 +51,24 @@
             chooseFileBTN.TabIndex = 3;
             chooseFileBTN.Text = "Choose File";
             chooseFileBTN.UseVisualStyleBackColor = true;
+            chooseFileBTN.Click += chooseFileBTN_Click;
+            // 
+            // exportCSVBTN
+            // 
+            exportCSVBTN.Location = new Point(153, 247);
+            exportCSVBTN.Name = "exportCSVBTN";
+            exportCSVBTN.Size = new Size(140, 48);
+            exportCSVBTN.TabIndex = 4;
+            exportCSVBTN.Text = "Export CSV File";
+            exportCSVBTN.UseVisualStyleBackColor = true;
+            exportCSVBTN.Click += ExportCSVBTN_Click;
             // 
             // GenesisRossA6
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(470, 450);
+            Controls.Add(exportCSVBTN);
             Controls.Add(chooseFileBTN);
             Controls.Add(exportJSONBTN);
             Name = "GenesisRossA6";
@@ -68,5 +80,6 @@
 
         private Button exportJSONBTN;
         private Button chooseFileBTN;
+        private Button exportCSVBTN;
     }
 }

@@ -55,7 +55,7 @@
             // 
             // exportCSVBTN
             // 
-            exportCSVBTN.Location = new Point(153, 247);
+            exportCSVBTN.Location = new Point(153, 229);
             exportCSVBTN.Name = "exportCSVBTN";
             exportCSVBTN.Size = new Size(140, 48);
             exportCSVBTN.TabIndex = 4;

@@ -117,7 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="GenesisRossA6_ExportCSVBTN_Click_CSV_file___csv" xml:space="preserve">
-	  <value>CSV file|*.csv</value>
-  </data>
 </root>

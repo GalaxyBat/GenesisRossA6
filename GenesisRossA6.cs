@@ -5,16 +5,28 @@ using System.Text.Json;
 
 namespace GenesisRossA6;
 
+/// <summary>
+/// The Partial Class GenesisRossA6
+/// </summary>
 public partial class GenesisRossA6 : Form
 {
 
     private List<Book>? _books;
+
+    /// <summary>
+    /// The constructor that creates GenesisRossA6
+    /// </summary>
     public GenesisRossA6()
     {
         InitializeComponent();
         _books = [];
     }
 
+    /// <summary>
+    /// Chooses the file to be loaded
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void chooseFileBTN_Click(object sender, EventArgs e)
     {
         var openFileDialog = new OpenFileDialog();
@@ -26,6 +38,11 @@ public partial class GenesisRossA6 : Form
         }
     }
 
+    /// <summary>
+    /// Turns .json into .csv
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void ExportCSVBTN_Click(object sender, EventArgs e)
     {
         if (_books == null || !_books.Any()) return;
@@ -49,13 +66,15 @@ public partial class GenesisRossA6 : Form
                 csv.AppendLine($"{title},{author},{pageLength},{genre},{yearPublished},{msrp}");
             }
 
-            // Write to the file with UTF-8 encoding
             File.WriteAllText(saveFileDialog.FileName, csv.ToString(), Encoding.UTF8);
         }
     }
 
-    
-
+    /// <summary>
+    /// Turns .csv back into .json
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void ExportJSONBTN_Click(object sender, EventArgs e)
     {
         if (_books == null || !_books.Any()) return;
@@ -77,12 +96,16 @@ public partial class GenesisRossA6 : Form
             File.WriteAllText(saveFileDialog.FileName, jsonData, Encoding.UTF8);
         }
     }
+
+    /// <summary>
+    /// Cleans the data to make sure that nothing is added on or taken away from the given data
+    /// </summary>
+    /// <param name="data"></param>
+    /// <returns></returns>
     private string CleanData(string? data)
     {
         if (string.IsNullOrEmpty(data)) return string.Empty;
 
-        // Remove or replace unwanted characters
-        // Replace newlines, carriage returns, quotes, tabs, and any other problematic characters
         var cleanData = data
             .Replace("\n", " ")
             .Replace("\r", " ")
@@ -90,12 +113,15 @@ public partial class GenesisRossA6 : Form
             .Replace("\t", " ")
             .Trim();
 
-        // Use regex to remove any non-printable or control characters
         cleanData = System.Text.RegularExpressions.Regex.Replace(cleanData, @"[^\u0020-\u007E]", string.Empty);
 
         return cleanData;
     }
 
+    /// <summary>
+    /// Displays the number of books
+    /// </summary>
+    /// <param name="bookNum"></param>
     private static void ShowNumberOfBooks(string bookNum)
     {
         const string caption = "The number of books";

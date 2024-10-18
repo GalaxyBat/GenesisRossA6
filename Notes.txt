@@ -1,0 +1,3 @@
+1. The resharper kept saying that I was spelling MSRP, CSV and JSON wrong
+2. The if statements are not invernted because they could mess up the functionality.
+3. CleanData() isn't static as it could make the numeric types be turned 0
